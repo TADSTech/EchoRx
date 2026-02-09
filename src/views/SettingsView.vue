@@ -17,7 +17,6 @@ const storageTotal = ref(0)
 const isClearing = ref(false)
 const showClearConfirm = ref(false)
 const ttsEnabled = ref(true)
-const ttsSpeed = ref(0.85)
 const notificationsEnabled = ref(false)
 
 const storagePercentage = computed(() => {
@@ -180,27 +179,7 @@ onMounted(async () => {
       </div>
 
       <div v-if="ttsEnabled && ttsState.isSupported" class="tts-settings">
-        <div class="setting-row">
-          <div class="setting-info">
-            <span class="setting-label">{{ t('settings.ttsSpeed') }}</span>
-            <span class="setting-description">{{ t('settings.ttsSlow') }} - {{ t('settings.ttsFast') }}</span>
-          </div>
-        </div>
-        
-        <div class="speed-slider">
-          <span class="speed-label">{{ t('settings.ttsSlow') }}</span>
-          <input 
-            type="range"
-            :value="ttsSpeed"
-            min="0.5"
-            max="1.2"
-            step="0.05"
-            class="slider"
-            @input="handleSpeedChange"
-            aria-label="Speech speed"
-          >
-          <span class="speed-label">{{ t('settings.ttsFast') }}</span>
-        </div>
+
 
         <div class="setting-row">
           <div class="setting-info">

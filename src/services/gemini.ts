@@ -26,11 +26,12 @@ interface GeminiResponse {
     }
 }
 
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'
+const GEMINI_3_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent'
+const GEMINI_2_5_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent'
 
 const ANALYSIS_PROMPT = `You are a medical assistant helping identify medications. Analyze this image of a pill or medication package.
 
-Return a JSON object with the following structure (use empty strings if information is not visible):
+Return ONLY a valid JSON object with the following structure (do NOT use markdown code blocks):
 {
   "drugName": "The medication name in English",
   "drugNameYoruba": "The medication name in Yoruba (if common)",
@@ -45,10 +46,10 @@ Return a JSON object with the following structure (use empty strings if informat
 }
 
 IMPORTANT: 
-- Only return valid JSON, no markdown or explanation
-- If you cannot identify the medication, set confidence to 0 and drugName to "Unknown"
-- Focus on what is visible in the image
-- Include common Nigerian brand names if recognized`
+- Return purely valid JSON text. Do NOT wrap in \`\`\`json ... \`\`\`.
+- If you cannot identify the medication, set confidence to 0 and drugName to "Unknown".
+- Focus on what is visible in the image.
+- Include common Nigerian brand names if recognized.`
 
 export async function analyzeMedicationImage(
     imageBase64: string
@@ -67,6 +68,34 @@ export async function analyzeMedicationImage(
 
     const base64Data = imageBase64.replace(/^data:image\/\w+;base64,/, '')
 
+    let result: GeminiAnalysisResult
+
+    try {
+        // Try Gemini 3 (Primary)
+        result = await callGeminiAPI(GEMINI_3_URL, apiKey, base64Data, true)
+    } catch (err) {
+        console.warn('Gemini 3 analysis failed, attempting fallback to Gemini 2.5...', err)
+        try {
+            // Fallback to Gemini 2.5 (No thinking config)
+            result = await callGeminiAPI(GEMINI_2_5_URL, apiKey, base64Data, false)
+        } catch (fallbackErr: any) {
+            // If fallback also fails, throw the original error or a meaningful message
+            console.error('Gemini 2.5 fallback failed:', fallbackErr)
+            throw new Error(`Medication analysis failed: ${fallbackErr.message || 'Service unavailable'}`)
+        }
+    }
+
+    await setCacheEntry(cacheKey, JSON.stringify(result))
+
+    return result
+}
+
+async function callGeminiAPI(
+    url: string,
+    apiKey: string,
+    base64Data: string,
+    useThinking: boolean
+): Promise<GeminiAnalysisResult> {
     const requestBody = {
         contents: [
             {
@@ -82,14 +111,15 @@ export async function analyzeMedicationImage(
             }
         ],
         generationConfig: {
-            temperature: 0.1,
+            temperature: useThinking ? 1.0 : 0.1,
             topK: 32,
             topP: 1,
-            maxOutputTokens: 1024
+            maxOutputTokens: 16000,
+            ...(useThinking ? { thinkingConfig: { thinkingLevel: "high" } } : {})
         }
     }
 
-    const response = await fetch(`${GEMINI_API_URL}?key=${apiKey}`, {
+    const response = await fetch(`${url}?key=${apiKey}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -99,7 +129,16 @@ export async function analyzeMedicationImage(
 
     if (!response.ok) {
         const errorText = await response.text()
-        throw new Error(`Gemini API error: ${response.status} - ${errorText}`)
+        let errorMessage = `Gemini API error: ${response.status}`
+        try {
+            const errorJson = JSON.parse(errorText)
+            if (errorJson.error && errorJson.error.message) {
+                errorMessage += ` - ${errorJson.error.message}`
+            }
+        } catch {
+            errorMessage += ` - ${errorText}`
+        }
+        throw new Error(errorMessage)
     }
 
     const data: GeminiResponse = await response.json()
@@ -108,22 +147,52 @@ export async function analyzeMedicationImage(
         throw new Error(`Gemini API error: ${data.error.message}`)
     }
 
-    const textContent = data.candidates?.[0]?.content?.parts?.[0]?.text
+    // With thinkingConfig enabled, parts[0] may be the "thought" part.
+    // Iterate all parts to find the one containing a JSON object.
+    const parts = data.candidates?.[0]?.content?.parts ?? []
+    let textContent: string | undefined 
+
+    for (const part of parts) {
+        if (part.text && part.text.includes('{')) {
+            textContent = part.text
+        }
+    }
+
+    // Fallback: just grab the first part with any text
+    if (!textContent) {
+        textContent = parts.find(p => p.text)?.text
+    }
 
     if (!textContent) {
         throw new Error('No response from Gemini API')
     }
 
-    const cleanedJson = textContent
-        .replace(/```json\n?/g, '')
-        .replace(/```\n?/g, '')
-        .trim()
+    // Clean the response: strip markdown code fences if present
+    let cleaned = textContent.trim()
+    cleaned = cleaned.replace(/^```(?:json)?\s*\n?/i, '').replace(/\n?```\s*$/i, '')
 
-    const result: GeminiAnalysisResult = JSON.parse(cleanedJson)
+    // Extract JSON from the response (find first { and last })
+    const startIndex = cleaned.indexOf('{')
+    const endIndex = cleaned.lastIndexOf('}')
 
-    await setCacheEntry(cacheKey, JSON.stringify(result))
+    if (startIndex === -1 || endIndex === -1) {
+        console.error('No JSON object found in response:', textContent)
+        throw new Error('Invalid response format: No JSON object found')
+    }
 
-    return result
+    let jsonString = cleaned.slice(startIndex, endIndex + 1)
+
+    // Clean up common JSON errors from LLMs
+    jsonString = jsonString.replace(/,(\s*})/g, '$1')
+    jsonString = jsonString.replace(/[\u200B-\u200D\uFEFF]/g, '')
+
+    try {
+        return JSON.parse(jsonString)
+    } catch (e) {
+        console.error('Failed to parse Gemini response as JSON. Original text:', textContent)
+        console.error('Slice attempted:', jsonString)
+        throw new Error('Invalid response format from medication analysis')
+    }
 }
 
 export function isOnline(): boolean {
@@ -149,3 +218,4 @@ export function getDefaultResult(): GeminiAnalysisResult {
         confidence: 0
     }
 }
+
