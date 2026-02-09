@@ -1,0 +1,212 @@
+{
+    "common": {
+        "loading": "Na-ebu...",
+        "save": "Chekwaa",
+        "cancel": "Kagbuo",
+        "delete": "Hichapụ",
+        "edit": "Dezie",
+        "back": "Laghachi",
+        "next": "Gaa n'ihu",
+        "done": "Emechaa",
+        "ok": "Ọ dị mma",
+        "yes": "Ee",
+        "no": "Mba",
+        "close": "Mechie",
+        "retry": "Nwaa ọzọ",
+        "search": "Chọọ",
+        "noResults": "Enweghị nsonaazụ",
+        "error": "Ihe mere njehie"
+    },
+    "nav": {
+        "main": "Ntụziaka isi",
+        "scan": "Nyochaa",
+        "schedule": "Usoro",
+        "pharmacies": "Ụlọ ahịa ọgwụ",
+        "settings": "Ntọala",
+        "help": "Enyemaka"
+    },
+    "status": {
+        "online": "N'ịntanetị",
+        "offline": "Na-enweghị ịntanetị",
+        "offlineMode": "Ị nọ n'ụzọ na-enweghị ịntanetị. Ụfọdụ atụmatụ nwere ike inwe oke."
+    },
+    "welcome": {
+        "tagline": "Onye enyemaka ọgwụ gị n'akpa gị",
+        "nigeriaOnly": "Ugbu a ọ dị na Nigeria naanị",
+        "nigeriaOnlyText": "Emezigharịrị EchoRx maka Nigeria nwere Igbo, Hausa, Yoruba na Bekee. Anyị na-arụsi ọrụ ike iji gbasaa n'ọtụtụ mba n'oge na-adịghị anya!",
+        "comingSoon": "Na-abịa n'oge na-adịghị anya:",
+        "chooseLanguage": "Họrọ asụsụ gị",
+        "whatYouCanDo": "Ihe ị nwere ike ime",
+        "features": {
+            "scan": "Jiri igwefoto gị nyochaa akara ọgwụ wee nweta ozi ozugbo",
+            "multilingual": "Gụọ ntuziaka n'asụsụ Igbo, Hausa, Yoruba ma ọ bụ Bekee",
+            "reminders": "Tọọ ncheta ka ị ghara ịtụfu oke",
+            "pharmacies": "Chọta ụlọ ahịa ọgwụ dị nso mgbe ịchọrọ ya",
+            "offline": "Ọ na-arụ ọrụ ọbụlagodi enweghị njikọ ịntanetị"
+        },
+        "getStarted": "Malite",
+        "privacyNote": "Data gị nọ n'igwe gị. Ọ dịghị mkpa akaụntụ."
+    },
+    "scan": {
+        "title": "Nyochaa Ọgwụ",
+        "subtitle": "Were foto nke ọgwụ gị iji nweta ozi",
+        "startCamera": "Mepee Igwefoto",
+        "uploadInstead": "Bulite Foto",
+        "retake": "Were ọzọ",
+        "analyze": "Nyochaa",
+        "analyzing": "Ana-anyocha ọgwụ gị...",
+        "offlineFallback": "Ọnọdụ na-enweghị ịntanetị: Na-eji data echekwara maka nyocha",
+        "tips": {
+            "title": "Ndụmọdụ maka nsonaazụ kacha mma",
+            "lighting": "Jiri ìhè dị mma",
+            "focus": "Jide ekwentị gị nke ọma",
+            "distance": "Hụ na akara ahụ nọ n'ime fremụ"
+        },
+        "result": {
+            "instructions": "Ntuziaka",
+            "warnings": "Ịdọ aka ná ntị",
+            "sideEffects": "Mmetụta ndị ọzọ",
+            "addToSchedule": "Tinye Ncheta",
+            "scanAnother": "Nyochaa nke ọzọ",
+            "speakInstructions": "Gụpụta"
+        },
+        "errors": {
+            "cameraAccess": "Enweghị ike ịnweta igwefoto. Biko lelee ikike.",
+            "analysisError": "Enweghị ike inyocha foto. Biko nwaa ọzọ.",
+            "noMedicationFound": "Achọtabeghị ọgwụ. Gbalịa iwere foto doro anya."
+        }
+    },
+    "schedule": {
+        "title": "Usoro M",
+        "subtitle": "Jikwaa ncheta ọgwụ gị",
+        "empty": "Enwebeghị ncheta",
+        "emptyText": "Tinye ncheta iji soro ọgwụ gị",
+        "addReminder": "Tinye Ncheta",
+        "editReminder": "Dezie Ncheta",
+        "time": "Oge",
+        "frequency": "Ugboro ole",
+        "notes": "Ndetu (nhọrọ)",
+        "notesPlaceholder": "d.o., Were ya na nri",
+        "markTaken": "Ewereela",
+        "frequencies": {
+            "daily": "Kwa ụbọchị",
+            "weekly": "Kwa izu",
+            "asNeeded": "Dị ka ọ dị mkpa"
+        },
+        "notifications": {
+            "enable": "Mee ka Ọkwa na-arụ ọrụ",
+            "enableText": "Nweta ncheta mgbe oge ruru iwere ọgwụ gị"
+        }
+    },
+    "pharmacies": {
+        "title": "Chọta Ụlọ Ahịa Ọgwụ",
+        "subtitle": "Chọta ụlọ ahịa ọgwụ dị nso na Nigeria",
+        "search": "Chọọ site n'aha ma ọ bụ ebe",
+        "listView": "Ndepụta",
+        "mapView": "Maapụ",
+        "open": "Mepere Ugbu a",
+        "closed": "Mechiri",
+        "getDirections": "Ntuziaka",
+        "call": "Kpọọ",
+        "noResults": "Achọtaghị ụlọ ahịa ọgwụ n'akụkụ a",
+        "locationRequired": "Mee ka Ebe na-arụ ọrụ",
+        "locationRequiredText": "Kwe ka ịnweta ebe iji chọta ụlọ ahịa ọgwụ dị nso gị",
+        "enableLocation": "Mee ka ọ rụọ ọrụ",
+        "offlineData": "Na-egosi data ụlọ ahịa ọgwụ echekwara",
+        "dataSource": "Data ụlọ ahịa ọgwụ sitere na OpenStreetMap",
+        "refreshData": "Mezie Data"
+    },
+    "settings": {
+        "title": "Ntọala",
+        "language": "Asụsụ",
+        "changeLanguage": "Gbanwee asụsụ",
+        "notifications": "Ọkwa",
+        "accessibility": "Nnweta",
+        "tts": "Gụọ n'olu",
+        "ttsTest": "Nwalee Olu",
+        "ttsSpeed": "Ọsọ Okwu",
+        "ttsSlow": "Nwayọọ",
+        "ttsFast": "Ọsọ ọsọ",
+        "data": "Data na Nchekwa",
+        "storageUsed": "Nchekwa ejirila",
+        "clearCache": "Hichapụ Cache",
+        "clearCacheConfirm": "Nke a ga-ehichapụ data niile echekwara gụnyere ọgwụ anyochara. A ga-echekwa usoro gị.",
+        "about": "Maka",
+        "version": "Ntụgharị",
+        "help": "Enyemaka na Nkwado",
+        "privacy": "Iwu Nzuzo"
+    },
+    "help": {
+        "title": "Enyemaka na Nkwado",
+        "subtitle": "Mụta otu esi eji EchoRx",
+        "quickTips": "Ndụmọdụ Ngwa ngwa",
+        "tips": {
+            "lighting": "Ìhè dị mma na-enyere onye nyocha aka ịgụ akara nke ọma",
+            "steady": "Jide ekwentị gị nke ọma mgbe ị na-ese foto",
+            "frame": "Hụ na akara ọgwụ ejupụtara na fremụ",
+            "offline": "A na-echekwa ọgwụ anyochara maka ịnweta na-enweghị ịntanetị",
+            "audio": "Pịa akara ụda iji nụrụ ntuziaka a na-agụ"
+        },
+        "howToUse": "Otu esi eji EchoRx",
+        "steps": {
+            "step1": {
+                "title": "Mepee Onye Nyocha",
+                "desc": "Pịa akara igwefoto ma ọ bụ bọtịnụ 'Nyochaa' na ihuenyo mbụ"
+            },
+            "step2": {
+                "title": "Were Foto",
+                "desc": "Duo igwefoto gị n'akara ọgwụ wee pịa bọtịnụ nweta"
+            },
+            "step3": {
+                "title": "Nyochaa Ozi",
+                "desc": "Gụọ aha ọgwụ, oke, na ntuziaka n'asụsụ ị họọrọ"
+            },
+            "step4": {
+                "title": "Tọọ Ncheta",
+                "desc": "Tinye ọgwụ na usoro gị iji nweta ncheta"
+            }
+        },
+        "faq": {
+            "title": "Ajụjụ A Na-ajụkarị",
+            "howToScan": {
+                "q": "Kedu ka m ga-esi nyochaa ọgwụ?",
+                "a": "Mepee taabụ Nyochaa, pịa 'Mepee Igwefoto', duo n'akara ọgwụ gị, wee pịa bọtịnụ nweta. Ngwa ahụ ga-enyocha foto wee gosi gị ozi gbasara ọgwụ ahụ."
+            },
+            "offlineMode": {
+                "q": "EchoRx ọ na-arụ ọrụ na-enweghị ịntanetị?",
+                "a": "Ee! Ozugbo ịnyochachara ọgwụ n'ịntanetị, a na-echekwa ha maka ịnweta na-enweghị ịntanetị. Onye na-achọ ụlọ ahịa ọgwụ na-arụkwa ọrụ na-enweghị ịntanetị site n'iji data echekwara."
+            },
+            "languages": {
+                "q": "Kedu asụsụ a na-akwado?",
+                "a": "Ugbu a, EchoRx na-akwado Bekee, Igbo, Hausa, na Yoruba. Ọtụtụ asụsụ Nigeria na nke ụwa na-abịa n'oge na-adịghị anya."
+            },
+            "accuracy": {
+                "q": "Onye nyocha ọgwụ ọ ziri ezi ole?",
+                "a": "Onye nyocha AI anyị ziri ezi nke ukwuu mana ọ bụghị ezigbo zuru oke. Na-achọpụta ozi dị mkpa site n'ịgwa onye na-ere ọgwụ ma ọ bụ dọkịta gị."
+            },
+            "privacy": {
+                "q": "Data m ọ nọ n'echekwa?",
+                "a": "Ee! Data ọgwụ gị niile ka a na-echekwa naanị n'igwe gị. Anyị anaghị anakọta ma ọ bụ kekọrịta ozi ahụike gị."
+            },
+            "pharmacies": {
+                "q": "Ebee ka data ụlọ ahịa ọgwụ si abịa?",
+                "a": "Ebe ụlọ ahịa ọgwụ sitere na OpenStreetMap, ọba data maapụ n'efu na mepere emepe. A na-emelite data mgbe mgbe."
+            }
+        },
+        "needMoreHelp": "Ịchọrọ Enyemaka Ọzọ?",
+        "contactIntro": "Ndị ọrụ nkwado anyị nọ ebe a iji nyere gị aka nwere ajụjụ ọ bụla.",
+        "disclaimer": {
+            "title": "Ịdọ Aka Ná Ntị Ọgwụgwọ",
+            "text": "EchoRx bụ naanị maka ozi ma ọ bụghị ihe ọzọ maka ndụmọdụ dọkịta. Na-ajụ dọkịta gị ma ọ bụ onye na-ere ọgwụ tupu ịṅụ ọgwụ ọ bụla."
+        }
+    },
+    "accessibility": {
+        "skipToMain": "Wụga n'isi ọdịnaya",
+        "openMenu": "Mepee menu",
+        "closeMenu": "Mechie menu"
+    },
+    "errors": {
+        "networkError": "Njehie netwọk. Biko lelee njikọ gị.",
+        "genericError": "Ihe mere njehie. Biko nwaa ọzọ."
+    }
+}

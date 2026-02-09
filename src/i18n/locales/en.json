@@ -1,0 +1,212 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "back": "Back",
+        "next": "Next",
+        "done": "Done",
+        "ok": "OK",
+        "yes": "Yes",
+        "no": "No",
+        "close": "Close",
+        "retry": "Retry",
+        "search": "Search",
+        "noResults": "No results found",
+        "error": "Something went wrong"
+    },
+    "nav": {
+        "main": "Main navigation",
+        "scan": "Scan",
+        "schedule": "Schedule",
+        "pharmacies": "Pharmacies",
+        "settings": "Settings",
+        "help": "Help"
+    },
+    "status": {
+        "online": "Online",
+        "offline": "Offline",
+        "offlineMode": "You are offline. Some features may be limited."
+    },
+    "welcome": {
+        "tagline": "Your pocket medication assistant",
+        "nigeriaOnly": "Currently Available in Nigeria",
+        "nigeriaOnlyText": "EchoRx is currently optimized for Nigeria with Yoruba, Hausa, Igbo and English support. We're working hard to expand to more countries soon!",
+        "comingSoon": "Coming soon:",
+        "chooseLanguage": "Choose your language",
+        "whatYouCanDo": "What you can do",
+        "features": {
+            "scan": "Scan medication labels with your camera and get instant information",
+            "multilingual": "Read instructions in Yoruba, Hausa, Igbo or English",
+            "reminders": "Set reminders so you never miss a dose",
+            "pharmacies": "Find nearby pharmacies when you need a refill",
+            "offline": "Works even without internet connection"
+        },
+        "getStarted": "Get Started",
+        "privacyNote": "Your data stays on your device. No account needed."
+    },
+    "scan": {
+        "title": "Scan Medication",
+        "subtitle": "Take a photo of your medicine to get information",
+        "startCamera": "Open Camera",
+        "uploadInstead": "Upload Photo",
+        "retake": "Retake",
+        "analyze": "Analyze",
+        "analyzing": "Analyzing your medication...",
+        "offlineFallback": "Offline mode: Using local database for analysis",
+        "tips": {
+            "title": "Tips for best results",
+            "lighting": "Use good lighting",
+            "focus": "Hold your phone steady",
+            "distance": "Keep the label in frame"
+        },
+        "result": {
+            "instructions": "Instructions",
+            "warnings": "Warnings",
+            "sideEffects": "Side Effects",
+            "addToSchedule": "Add Reminder",
+            "scanAnother": "Scan Another",
+            "speakInstructions": "Read Aloud"
+        },
+        "errors": {
+            "cameraAccess": "Unable to access camera. Please check permissions.",
+            "analysisError": "Unable to analyze image. Please try again.",
+            "noMedicationFound": "No medication detected. Try taking a clearer photo."
+        }
+    },
+    "schedule": {
+        "title": "My Schedule",
+        "subtitle": "Manage your medication reminders",
+        "empty": "No reminders yet",
+        "emptyText": "Add a reminder to keep track of your medications",
+        "addReminder": "Add Reminder",
+        "editReminder": "Edit Reminder",
+        "time": "Time",
+        "frequency": "Frequency",
+        "notes": "Notes (optional)",
+        "notesPlaceholder": "e.g., Take with food",
+        "markTaken": "Taken",
+        "frequencies": {
+            "daily": "Daily",
+            "weekly": "Weekly",
+            "asNeeded": "As Needed"
+        },
+        "notifications": {
+            "enable": "Enable Notifications",
+            "enableText": "Get reminders when it's time to take your medication"
+        }
+    },
+    "pharmacies": {
+        "title": "Find Pharmacies",
+        "subtitle": "Locate nearby pharmacies in Nigeria",
+        "search": "Search by name or location",
+        "listView": "List",
+        "mapView": "Map",
+        "open": "Open Now",
+        "closed": "Closed",
+        "getDirections": "Directions",
+        "call": "Call",
+        "noResults": "No pharmacies found in this area",
+        "locationRequired": "Enable Location",
+        "locationRequiredText": "Allow location access to find pharmacies near you",
+        "enableLocation": "Enable",
+        "offlineData": "Showing cached pharmacy data",
+        "dataSource": "Pharmacy data from OpenStreetMap",
+        "refreshData": "Refresh Data"
+    },
+    "settings": {
+        "title": "Settings",
+        "language": "Language",
+        "changeLanguage": "Change language",
+        "notifications": "Notifications",
+        "accessibility": "Accessibility",
+        "tts": "Voice Readout",
+        "ttsTest": "Test Voice",
+        "ttsSpeed": "Speech Speed",
+        "ttsSlow": "Slow",
+        "ttsFast": "Fast",
+        "data": "Data & Storage",
+        "storageUsed": "Storage Used",
+        "clearCache": "Clear Cache",
+        "clearCacheConfirm": "This will delete all cached data including scanned medications. Your schedules will be kept.",
+        "about": "About",
+        "version": "Version",
+        "help": "Help & Support",
+        "privacy": "Privacy Policy"
+    },
+    "help": {
+        "title": "Help & Support",
+        "subtitle": "Learn how to use EchoRx",
+        "quickTips": "Quick Tips",
+        "tips": {
+            "lighting": "Good lighting helps the scanner read labels better",
+            "steady": "Hold your phone steady when taking photos",
+            "frame": "Make sure the medicine label fills the frame",
+            "offline": "Scanned medicines are saved for offline access",
+            "audio": "Tap the speaker icon to hear instructions read aloud"
+        },
+        "howToUse": "How to Use EchoRx",
+        "steps": {
+            "step1": {
+                "title": "Open the Scanner",
+                "desc": "Tap the camera icon or 'Scan' button on the home screen"
+            },
+            "step2": {
+                "title": "Take a Photo",
+                "desc": "Point your camera at the medication label and tap the capture button"
+            },
+            "step3": {
+                "title": "Review Information",
+                "desc": "Read the drug name, dosage, and instructions in your preferred language"
+            },
+            "step4": {
+                "title": "Set a Reminder",
+                "desc": "Add the medication to your schedule to get reminders"
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "howToScan": {
+                "q": "How do I scan a medication?",
+                "a": "Open the Scan tab, tap 'Open Camera', point at your medicine label, and tap the capture button. The app will analyze the image and show you information about the medication."
+            },
+            "offlineMode": {
+                "q": "Does EchoRx work offline?",
+                "a": "Yes! Once you've scanned medications with internet, they're saved for offline access. The pharmacy locator also works offline using cached data."
+            },
+            "languages": {
+                "q": "What languages are supported?",
+                "a": "Currently, EchoRx supports English, Yoruba, Hausa, and Igbo. More Nigerian languages and international languages are coming soon."
+            },
+            "accuracy": {
+                "q": "How accurate is the medication scanner?",
+                "a": "Our AI scanner is highly accurate but not perfect. Always verify important information with your pharmacist or doctor."
+            },
+            "privacy": {
+                "q": "Is my data private?",
+                "a": "Yes! All your medication data is stored locally on your device. We don't collect or share your health information."
+            },
+            "pharmacies": {
+                "q": "Where does pharmacy data come from?",
+                "a": "Pharmacy locations are sourced from OpenStreetMap, a free and open map database. Data is regularly updated."
+            }
+        },
+        "needMoreHelp": "Need More Help?",
+        "contactIntro": "Our support team is here to help you with any questions.",
+        "disclaimer": {
+            "title": "Medical Disclaimer",
+            "text": "EchoRx is for informational purposes only and is not a substitute for professional medical advice. Always consult your doctor or pharmacist before taking any medication."
+        }
+    },
+    "accessibility": {
+        "skipToMain": "Skip to main content",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu"
+    },
+    "errors": {
+        "networkError": "Network error. Please check your connection.",
+        "genericError": "Something went wrong. Please try again."
+    }
+}

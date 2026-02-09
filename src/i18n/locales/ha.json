@@ -1,0 +1,212 @@
+{
+    "common": {
+        "loading": "Ana lodi...",
+        "save": "Ajiye",
+        "cancel": "Soke",
+        "delete": "Share",
+        "edit": "Gyara",
+        "back": "Komawa",
+        "next": "Gaba",
+        "done": "An gama",
+        "ok": "To",
+        "yes": "Eh",
+        "no": "A'a",
+        "close": "Rufe",
+        "retry": "Sake gwadawa",
+        "search": "Nema",
+        "noResults": "Babu sakamako",
+        "error": "Wani abu ya faru"
+    },
+    "nav": {
+        "main": "Babban kaifafa",
+        "scan": "Duba",
+        "schedule": "Jadawali",
+        "pharmacies": "Kantunan magani",
+        "settings": "Saiti",
+        "help": "Taimako"
+    },
+    "status": {
+        "online": "A kan layi",
+        "offline": "Ba a kan layi ba",
+        "offlineMode": "Ba ku da haɗin yanar gizo. Wasu abubuwa na iya yin iyaka."
+    },
+    "welcome": {
+        "tagline": "Mai taimaka muku da magunguna a aljihunku",
+        "nigeriaOnly": "A yanzu haka yana aiki a Nigeria ne kawai",
+        "nigeriaOnlyText": "EchoRx an gyara shi don Nigeria tare da Hausa, Yoruba, Igbo da Turanci. Muna aiki tuƙuru don fadada zuwa ƙasashe masu yawa nan ba da jimawa ba!",
+        "comingSoon": "Masu zuwa nan ba da jimawa ba:",
+        "chooseLanguage": "Zaɓi yarenku",
+        "whatYouCanDo": "Abin da za ku iya yi",
+        "features": {
+            "scan": "Duba label ɗin magani da kyamarar ku kuma ku sami labari nan take",
+            "multilingual": "Karanta umarni cikin Hausa, Yoruba, Igbo ko Turanci",
+            "reminders": "Saita tunatarwa don kada ku rasa kashi",
+            "pharmacies": "Nemo kantunan magani kusa da ku lokacin da kuke bukata",
+            "offline": "Yana aiki ko ba tare da haɗin yanar gizo ba"
+        },
+        "getStarted": "Fara",
+        "privacyNote": "Bayananku suna kan na'urarku. Babu buƙatar asusu."
+    },
+    "scan": {
+        "title": "Duba Magani",
+        "subtitle": "Ɗauki hoton maganinku don samun bayani",
+        "startCamera": "Buɗe Kyamara",
+        "uploadInstead": "Loda Hoto",
+        "retake": "Sake ɗauka",
+        "analyze": "Bincika",
+        "analyzing": "Ana binciken maganinku...",
+        "offlineFallback": "Yanayin rashin layin: Ana amfani da bayanan da aka adana don bincike",
+        "tips": {
+            "title": "Shawarwari don mafi kyawun sakamako",
+            "lighting": "Yi amfani da haske mai kyau",
+            "focus": "Riƙe wayarku daidai",
+            "distance": "Tabbatar label ɗin yana cikin firam"
+        },
+        "result": {
+            "instructions": "Umarni",
+            "warnings": "Gargaɗi",
+            "sideEffects": "Illolin gefe",
+            "addToSchedule": "Ƙara Tunatarwa",
+            "scanAnother": "Duba wani",
+            "speakInstructions": "Karanta waje"
+        },
+        "errors": {
+            "cameraAccess": "Ba za a iya shiga kyamara ba. Da fatan za a duba izini.",
+            "analysisError": "Ba za a iya bincika hoton ba. Da fatan za a sake gwadawa.",
+            "noMedicationFound": "Ba a gano magani ba. Gwada ɗaukar hoto mai tsafta."
+        }
+    },
+    "schedule": {
+        "title": "Jadawalina",
+        "subtitle": "Sarrafa tunatarwar maganganunku",
+        "empty": "Babu tunatarwa tukuna",
+        "emptyText": "Ƙara tunatarwa don bin diddigin magungunanku",
+        "addReminder": "Ƙara Tunatarwa",
+        "editReminder": "Gyara Tunatarwa",
+        "time": "Lokaci",
+        "frequency": "Sau nawa",
+        "notes": "Bayanai (zaɓi)",
+        "notesPlaceholder": "m.s., Sha da abinci",
+        "markTaken": "An sha",
+        "frequencies": {
+            "daily": "Kowace rana",
+            "weekly": "Mako-mako",
+            "asNeeded": "Idan ana buƙata"
+        },
+        "notifications": {
+            "enable": "Kunna Sanarwa",
+            "enableText": "Sami tunatarwa lokacin da lokaci ya yi na sha maganinku"
+        }
+    },
+    "pharmacies": {
+        "title": "Nemo Kantunan Magani",
+        "subtitle": "Nemo kantunan magani kusa da ku a Nigeria",
+        "search": "Nema ta suna ko wuri",
+        "listView": "Jerin",
+        "mapView": "Taswirar",
+        "open": "A buɗe yanzu",
+        "closed": "A rufe",
+        "getDirections": "Jagora",
+        "call": "Kira",
+        "noResults": "Ba a sami kantunan magani a wannan yankin ba",
+        "locationRequired": "Kunna Wuri",
+        "locationRequiredText": "Ba da damar samun wuri don nemo kantunan magani kusa da ku",
+        "enableLocation": "Kunna",
+        "offlineData": "Ana nuna bayanan kantunan magani da aka adana",
+        "dataSource": "Bayanan kantunan magani daga OpenStreetMap",
+        "refreshData": "Sabunta Bayanai"
+    },
+    "settings": {
+        "title": "Saiti",
+        "language": "Yare",
+        "changeLanguage": "Canja yare",
+        "notifications": "Sanarwa",
+        "accessibility": "Sauƙin shiga",
+        "tts": "Karantawa da murya",
+        "ttsTest": "Gwada Murya",
+        "ttsSpeed": "Saurin Magana",
+        "ttsSlow": "A hankali",
+        "ttsFast": "Da sauri",
+        "data": "Bayanai da Ajiya",
+        "storageUsed": "Ajiya da aka yi amfani",
+        "clearCache": "Share Cache",
+        "clearCacheConfirm": "Wannan zai share duk bayanan da aka adana ciki har da magungunan da aka duba. Za a ajiye jadawalinku.",
+        "about": "Game da",
+        "version": "Sigar",
+        "help": "Taimako da Tallafi",
+        "privacy": "Manufar Sirri"
+    },
+    "help": {
+        "title": "Taimako da Tallafi",
+        "subtitle": "Koyi yadda ake amfani da EchoRx",
+        "quickTips": "Shawarwari Masu Sauri",
+        "tips": {
+            "lighting": "Haske mai kyau yana taimaka wa mai duban karanta label ɗin daidai",
+            "steady": "Riƙe wayar ku daidai yayin ɗaukar hoto",
+            "frame": "Tabbatar label ɗin magani ya cika firam",
+            "offline": "Ana adana magungunan da aka duba don samun dama ba tare da layi ba",
+            "audio": "Taɓa alamar lasifika don jin umarni ana karantawa"
+        },
+        "howToUse": "Yadda ake amfani da EchoRx",
+        "steps": {
+            "step1": {
+                "title": "Buɗe Mai Duba",
+                "desc": "Taɓa alamar kyamara ko maɓallin 'Duba' a kan allon farko"
+            },
+            "step2": {
+                "title": "Ɗauki Hoto",
+                "desc": "Nuna kyamarar ku zuwa label ɗin magani kuma taɓa maɓallin ɗauka"
+            },
+            "step3": {
+                "title": "Duba Bayani",
+                "desc": "Karanta sunan magani, kashi, da umarni cikin yaren da kuka fi so"
+            },
+            "step4": {
+                "title": "Saita Tunatarwa",
+                "desc": "Ƙara magani zuwa jadawalinka don samun tunatarwa"
+            }
+        },
+        "faq": {
+            "title": "Tambayoyin da ake yawan yi",
+            "howToScan": {
+                "q": "Ta yaya zan duba magani?",
+                "a": "Buɗe shafin Duba, taɓa 'Buɗe Kyamara', nuna zuwa label ɗin maganinka, kuma taɓa maɓallin ɗauka. Manhajin zai bincika hoton kuma ya nuna maka bayani game da maganin."
+            },
+            "offlineMode": {
+                "q": "Shin EchoRx yana aiki ba tare da yanar gizo ba?",
+                "a": "Eh! Da zarar kun duba magunguna tare da yanar gizo, ana adana su don samun dama ba tare da layi ba. Mai neman kantin magani kuma yana aiki ba tare da layi ba ta amfani da bayanan da aka adana."
+            },
+            "languages": {
+                "q": "Waɗanne yaruka ake tallafawa?",
+                "a": "A halin yanzu, EchoRx yana tallafawa Turanci, Hausa, Yoruba, da Igbo. Ƙarin yarukan Nigeria da na duniya suna zuwa nan ba da jimawa ba."
+            },
+            "accuracy": {
+                "q": "Yaya daidai ne mai duban magani?",
+                "a": "Mai duban AI namu yana da daidaito sosai amma ba cikakke ba ne. Kullum tabbatar da muhimman bayanai tare da mai sayar da magani ko likitanku."
+            },
+            "privacy": {
+                "q": "Shin bayyana suna da aminci?",
+                "a": "Eh! Duk bayanan maganganunku ana adana su a na'urar ku kawai. Ba mu tattara ko raba bayanan lafiyarku ba."
+            },
+            "pharmacies": {
+                "q": "Daga ina bayanan kantin magani suka fito?",
+                "a": "Wuraren kantunan magani sun fito daga OpenStreetMap, taswirar kyauta da buɗaɗɗen bayanan. Ana sabunta bayanai akai-akai."
+            }
+        },
+        "needMoreHelp": "Kuna Buƙatar Ƙarin Taimako?",
+        "contactIntro": "Ƙungiyar goyon bayanmu tana nan don taimaka muku da kowane tambaya.",
+        "disclaimer": {
+            "title": "Gargaɗin Likitanci",
+            "text": "EchoRx don bayani ne kawai kuma ba madadin shawarar likita na ƙwararru ba ne. Kullum yi magana da likitanka ko mai sayar da magani kafin ka sha kowace magani."
+        }
+    },
+    "accessibility": {
+        "skipToMain": "Tsallaka zuwa babban abun ciki",
+        "openMenu": "Buɗe menu",
+        "closeMenu": "Rufe menu"
+    },
+    "errors": {
+        "networkError": "Kuskuren hanyar sadarwa. Da fatan za a duba haɗin ku.",
+        "genericError": "Wani abu ya faru. Da fatan za a sake gwadawa."
+    }
+}

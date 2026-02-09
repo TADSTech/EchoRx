@@ -1,0 +1,290 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "MedPlus Pharmacy",
+                "address": "45 Awolowo Road, Ikoyi",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 234 5678",
+                "hours": "8:00 AM - 10:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.4346,
+                    6.4541
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "HealthPlus Pharmacy",
+                "address": "12 Admiralty Way, Lekki Phase 1",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 345 6789",
+                "hours": "24 Hours",
+                "is24Hours": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.4723,
+                    6.4367
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Alpha Pharmacy",
+                "address": "23 Opebi Road, Ikeja",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 456 7890",
+                "hours": "7:00 AM - 9:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3515,
+                    6.6018
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Unity Pharmacy",
+                "address": "56 Allen Avenue, Ikeja",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 567 8901",
+                "hours": "8:00 AM - 8:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3468,
+                    6.6055
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pharma-Deko Ltd",
+                "address": "15 Marina Road",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 678 9012",
+                "hours": "9:00 AM - 6:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3904,
+                    6.4474
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "May & Baker Pharmacy",
+                "address": "3/5 Sapara Street, Surulere",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 789 0123",
+                "hours": "8:00 AM - 9:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3520,
+                    6.4969
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Emzor Pharmacy",
+                "address": "Plot 3C, Block A, Amuwo Odofin Industrial Layout",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 890 1234",
+                "hours": "24 Hours",
+                "is24Hours": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3165,
+                    6.4485
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Dave & Rose Pharmacy",
+                "address": "14 Toyin Street, Ikeja",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 901 2345",
+                "hours": "7:00 AM - 10:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3535,
+                    6.5982
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Drugfield Pharmacy",
+                "address": "24 Obafemi Awolowo Way, Ikeja",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 012 3456",
+                "hours": "8:00 AM - 8:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3442,
+                    6.5954
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Swiss Pharma Pharmacy",
+                "address": "5 Idejo Street, Victoria Island",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 123 4567",
+                "hours": "9:00 AM - 7:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.4216,
+                    6.4286
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "UCH Pharmacy",
+                "address": "University College Hospital, Queen Elizabeth Road",
+                "city": "Ibadan",
+                "state": "Oyo",
+                "phone": "+234 2 234 5678",
+                "hours": "24 Hours",
+                "is24Hours": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.9053,
+                    7.4015
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jericho Pharmacy",
+                "address": "12 Jericho GRA",
+                "city": "Ibadan",
+                "state": "Oyo",
+                "phone": "+234 2 345 6789",
+                "hours": "8:00 AM - 8:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.8617,
+                    7.3916
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Zenith Medical Centre Pharmacy",
+                "address": "45 Ring Road, Challenge",
+                "city": "Ibadan",
+                "state": "Oyo",
+                "phone": "+234 2 456 7890",
+                "hours": "7:00 AM - 9:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.8935,
+                    7.3605
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "LUTH Pharmacy",
+                "address": "Lagos University Teaching Hospital, Idi-Araba",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 345 6780",
+                "hours": "24 Hours",
+                "is24Hours": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3547,
+                    6.5133
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Yaba Pharmacy",
+                "address": "78 Herbert Macaulay Way",
+                "city": "Lagos",
+                "state": "Lagos",
+                "phone": "+234 1 456 7891",
+                "hours": "8:00 AM - 9:00 PM",
+                "is24Hours": false
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.3788,
+                    6.5208
+                ]
+            }
+        }
+    ]
+}

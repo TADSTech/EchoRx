@@ -1,0 +1,212 @@
+{
+    "common": {
+        "loading": "Nduro...",
+        "save": "Fi pamọ",
+        "cancel": "Fagile",
+        "delete": "Pa rẹ",
+        "edit": "Ṣatunṣe",
+        "back": "Pada",
+        "next": "Tẹsiwaju",
+        "done": "Ti ṣe",
+        "ok": "O dara",
+        "yes": "Bẹẹni",
+        "no": "Rara",
+        "close": "Pa",
+        "retry": "Tun gbiyanju",
+        "search": "Wa",
+        "noResults": "Ko si abajade",
+        "error": "Nkan kan ko tọ"
+    },
+    "nav": {
+        "main": "Ọna akọkọ",
+        "scan": "Ṣayẹwo",
+        "schedule": "Akoko",
+        "pharmacies": "Ile itaja oogun",
+        "settings": "Eto",
+        "help": "Iranlọwọ"
+    },
+    "status": {
+        "online": "Ori ayelujara",
+        "offline": "Ko si ayelujara",
+        "offlineMode": "O wa ni ipo aisinipo. Diẹ ninu awọn ẹya le ni opin."
+    },
+    "welcome": {
+        "tagline": "Oluranlọwọ oogun rẹ ninu apo",
+        "nigeriaOnly": "O wa ni Nigeria nikan ni bayi",
+        "nigeriaOnlyText": "EchoRx ti ṣetan fun Nigeria pẹlu Yoruba, Hausa, Igbo ati Geesi. A n ṣiṣẹ lati fẹ si awọn orilẹ-ede miiran laipẹ!",
+        "comingSoon": "N bọ laipẹ:",
+        "chooseLanguage": "Yan ede rẹ",
+        "whatYouCanDo": "Ohun ti o le ṣe",
+        "features": {
+            "scan": "Ṣayẹwo aami oogun pẹlu kamẹra rẹ ki o gba alaye lẹsẹkẹsẹ",
+            "multilingual": "Ka itọnisọna ni Yoruba, Hausa, Igbo tabi Geesi",
+            "reminders": "Ṣeto iranti ki o maṣe padanu iwọn lilo",
+            "pharmacies": "Wa awọn ile itaja oogun ti o sunmọ nigbati o nilo",
+            "offline": "O n ṣiṣẹ paapaa laisi asopọ intanẹẹti"
+        },
+        "getStarted": "Bẹrẹ",
+        "privacyNote": "Data rẹ wa lori ẹrọ rẹ. Ko nilo akọọlẹ."
+    },
+    "scan": {
+        "title": "Ṣayẹwo Oogun",
+        "subtitle": "Ya aworan oogun rẹ lati gba alaye",
+        "startCamera": "Ṣii Kamẹra",
+        "uploadInstead": "Fi Aworan soke",
+        "retake": "Tun ya",
+        "analyze": "Ṣe atupale",
+        "analyzing": "A n ṣayẹwo oogun rẹ...",
+        "offlineFallback": "Ipo aisinipo: A n lo data ti a fi pamọ fun atupale",
+        "tips": {
+            "title": "Awọn imọran fun abajade to dara julọ",
+            "lighting": "Lo ina to dara",
+            "focus": "Di foonu rẹ mu dada",
+            "distance": "Jẹ ki aami wa ninu fireemu"
+        },
+        "result": {
+            "instructions": "Itọnisọna",
+            "warnings": "Ikilo",
+            "sideEffects": "Awọn ipa aburu",
+            "addToSchedule": "Fi kun iranti",
+            "scanAnother": "Ṣayẹwo ọkan miiran",
+            "speakInstructions": "Sọ jade"
+        },
+        "errors": {
+            "cameraAccess": "Ko le wọle si kamẹra. Jọwọ ṣayẹwo igbanilaaye.",
+            "analysisError": "Ko le ṣe atupale aworan. Jọwọ tun gbiyanju.",
+            "noMedicationFound": "Ko ri oogun. Gbiyanju lati ya aworan to mọ julọ."
+        }
+    },
+    "schedule": {
+        "title": "Akoko Mi",
+        "subtitle": "Ṣakoso awọn iranti oogun rẹ",
+        "empty": "Ko si iranti sibẹsibẹ",
+        "emptyText": "Fi iranti kun lati tọpinpin awọn oogun rẹ",
+        "addReminder": "Fi Iranti kun",
+        "editReminder": "Ṣatunṣe Iranti",
+        "time": "Akoko",
+        "frequency": "Igba melo",
+        "notes": "Akọsilẹ (aṣayan)",
+        "notesPlaceholder": "f.a., Mu pẹlu ounje",
+        "markTaken": "Ti mu",
+        "frequencies": {
+            "daily": "Lojoojumọ",
+            "weekly": "Lọsẹ",
+            "asNeeded": "Bi o ṣe nilo"
+        },
+        "notifications": {
+            "enable": "Mu Awọn Ifiranṣe ṣiṣẹ",
+            "enableText": "Gba iranti nigbati o to akoko lati mu oogun rẹ"
+        }
+    },
+    "pharmacies": {
+        "title": "Wa Ile Itaja Oogun",
+        "subtitle": "Wa awọn ile itaja oogun ti o sunmọ ni Nigeria",
+        "search": "Wa pẹlu orukọ tabi ipo",
+        "listView": "Akojọ",
+        "mapView": "Maapu",
+        "open": "Ṣii Bayi",
+        "closed": "Ti pa",
+        "getDirections": "Itọsọna",
+        "call": "Pe",
+        "noResults": "Ko ri ile itaja oogun ni agbegbe yii",
+        "locationRequired": "Mu Ipo ṣiṣẹ",
+        "locationRequiredText": "Gba laaye wiwọle ipo lati wa awọn ile itaja oogun ti o sunmọ ọ",
+        "enableLocation": "Mu ṣiṣẹ",
+        "offlineData": "O n ṣafihan data ile itaja oogun ti a fi pamọ",
+        "dataSource": "Data ile itaja oogun lati OpenStreetMap",
+        "refreshData": "Tunṣe Data"
+    },
+    "settings": {
+        "title": "Eto",
+        "language": "Ede",
+        "changeLanguage": "Yi ede pada",
+        "notifications": "Awọn Ifiranṣe",
+        "accessibility": "Irọrun wiwọle",
+        "tts": "Ka jade",
+        "ttsTest": "Dan Ohun wo",
+        "ttsSpeed": "Iyara Siso",
+        "ttsSlow": "Lọra",
+        "ttsFast": "Yara",
+        "data": "Data ati Ibi ipamọ",
+        "storageUsed": "Ibi ipamọ ti a lo",
+        "clearCache": "Pa Cache rẹ",
+        "clearCacheConfirm": "Eyi yoo pa gbogbo data ti a fi pamọ pẹlu awọn oogun ti a ṣayẹwo. A yoo pa awọn akoko rẹ mọ.",
+        "about": "Nipa",
+        "version": "Version",
+        "help": "Iranlọwọ ati Atilẹyin",
+        "privacy": "Eto Asiri"
+    },
+    "help": {
+        "title": "Iranlọwọ ati Atilẹyin",
+        "subtitle": "Kọ ẹkọ bi o ṣe le lo EchoRx",
+        "quickTips": "Awọn Imọran Kiakia",
+        "tips": {
+            "lighting": "Ina to dara ran oluyẹwo ka awọn aami daradara",
+            "steady": "Di foonu rẹ mu duro nigba ti o n ya aworan",
+            "frame": "Rii daju pe aami oogun kun fireemu",
+            "offline": "A fi awọn oogun ti a ṣayẹwo pamọ fun iraye aisinipo",
+            "audio": "Tẹ aami agbohunsoke lati gbọ itọnisọna"
+        },
+        "howToUse": "Bi o ṣe le lo EchoRx",
+        "steps": {
+            "step1": {
+                "title": "Ṣii Oluyẹwo",
+                "desc": "Tẹ aami kamẹra tabi bọtini 'Ṣayẹwo' lori iboju ile"
+            },
+            "step2": {
+                "title": "Ya Aworan",
+                "desc": "Tọka kamẹra rẹ si aami oogun ki o tẹ bọtini igbasilẹ"
+            },
+            "step3": {
+                "title": "Ṣayẹwo Alaye",
+                "desc": "Ka orukọ oogun, iwọn lilo, ati itọnisọna ni ede ti o fẹ"
+            },
+            "step4": {
+                "title": "Ṣeto Iranti",
+                "desc": "Fi oogun kun akoko rẹ lati gba iranti"
+            }
+        },
+        "faq": {
+            "title": "Awọn Ibeere Ti A Maa N Beere",
+            "howToScan": {
+                "q": "Bawo ni mo ṣe le ṣayẹwo oogun?",
+                "a": "Ṣii taabu Ṣayẹwo, tẹ 'Ṣii Kamẹra', tọka si aami oogun rẹ, ki o tẹ bọtini igbasilẹ. App yoo ṣe atupale aworan naa yoo si fihan ọ alaye nipa oogun naa."
+            },
+            "offlineMode": {
+                "q": "Ṣe EchoRx n ṣiṣẹ ni ipo aisinipo?",
+                "a": "Bẹẹni! Lẹhin ti o ti ṣayẹwo awọn oogun pẹlu intanẹẹti, wọn wa fun iraye aisinipo. Oluwa ile itaja oogun tun ṣiṣẹ aisinipo nipa lilo data ti a fi pamọ."
+            },
+            "languages": {
+                "q": "Awọn ede wo ni a n ṣe atilẹyin?",
+                "a": "Lọwọlọwọ, EchoRx ṣe atilẹyin Geesi, Yoruba, Hausa, ati Igbo. Awọn ede Nigeria miiran ati awọn ede kariaye n bọ laipẹ."
+            },
+            "accuracy": {
+                "q": "Oluyẹwo oogun ṣe deede to?",
+                "a": "Oluyẹwo AI wa ṣe deede pupọ ṣugbọn kii ṣe pipe. Nigbagbogbo ṣayẹwo alaye pataki pẹlu oniṣoogun tabi dokita rẹ."
+            },
+            "privacy": {
+                "q": "Ṣe data mi ni aabo?",
+                "a": "Bẹẹni! Gbogbo data oogun rẹ wa lori ẹrọ rẹ nikan. A ko gba tabi pin alaye ilera rẹ."
+            },
+            "pharmacies": {
+                "q": "Data ile itaja oogun ti wa nibo?",
+                "a": "Awọn ipo ile itaja oogun wa lati OpenStreetMap, ibi ipamọ maapu ọfẹ ati ṣiṣi. A maa n ṣe imudojuiwọn data nigbagbogbo."
+            }
+        },
+        "needMoreHelp": "Nilo Iranlọwọ Diẹ Sii?",
+        "contactIntro": "Ẹgbẹ atilẹyin wa wa lati ran ọ lọwọ pẹlu ibeere eyikeyi.",
+        "disclaimer": {
+            "title": "Ikilo Iwosan",
+            "text": "EchoRx jẹ fun alaye nikan ati kii ṣe aropo fun imọran iṣoogun alamọja. Nigbagbogbo ba dokita tabi oniṣoogun rẹ sọrọ ṣaaju ki o to mu oogun eyikeyi."
+        }
+    },
+    "accessibility": {
+        "skipToMain": "Fo lọ si akoonu akọkọ",
+        "openMenu": "Ṣii akojọ aṣayan",
+        "closeMenu": "Pa akojọ aṣayan"
+    },
+    "errors": {
+        "networkError": "Aṣiṣe nẹtiwọki. Jọwọ ṣayẹwo asopọ rẹ.",
+        "genericError": "Nkan kan ko tọ. Jọwọ tun gbiyanju."
+    }
+}
