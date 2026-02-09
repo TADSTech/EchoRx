@@ -18,6 +18,7 @@ const step = ref<ScanStep>('initial')
 const capturedImage = ref<string | null>(null)
 const isLoading = ref(false)
 const errorMessage = ref('')
+const showScheduleModal = ref(false)
 const analysisResult = ref<{
   drugName: string
   drugNameYoruba?: string
@@ -31,6 +32,14 @@ const analysisResult = ref<{
   confidence: number
   isOffline?: boolean
 } | null>(null)
+
+const newSchedule = ref({
+  drugName: '',
+  dosage: '',
+  time: '08:00',
+  frequency: 'daily' as 'daily' | 'weekly' | 'asNeeded',
+  notes: ''
+})
 
 const handleStartCamera = async () => {
   step.value = 'camera'
@@ -118,6 +127,39 @@ const handleScanAnother = () => {
   capturedImage.value = null
   analysisResult.value = null
   errorMessage.value = ''
+}
+
+const openScheduleModal = () => {
+  if (!analysisResult.value) return
+  
+  newSchedule.value = {
+    drugName: analysisResult.value.drugName,
+    dosage: analysisResult.value.dosage,
+    time: '08:00',
+    frequency: 'daily',
+    notes: ''
+  }
+  showScheduleModal.value = true
+}
+
+const saveSchedule = async () => {
+  try {
+    const scheduleData = {
+      drugName: newSchedule.value.drugName,
+      dosage: newSchedule.value.dosage,
+      time: newSchedule.value.time,
+      frequency: newSchedule.value.frequency,
+      notes: newSchedule.value.notes || undefined,
+      enabled: true,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }
+    
+    await db.schedules.add(scheduleData)
+    showScheduleModal.value = false
+  } catch (err) {
+    console.error('Failed to save schedule:', err)
+  }
 }
 
 const handleFileUpload = (event: Event) => {
@@ -345,14 +387,14 @@ onUnmounted(() => {
           <i class="fas fa-volume-up" aria-hidden="true"></i>
         </button>
 
-        <router-link 
-          to="/schedule" 
+        <button 
           class="btn btn-primary"
+          @click="openScheduleModal"
           aria-label="Add to medication schedule"
         >
           <i class="fas fa-clock" aria-hidden="true"></i>
           {{ t('scan.result.addToSchedule') }}
-        </router-link>
+        </button>
 
         <button 
           class="btn btn-secondary"
@@ -362,6 +404,104 @@ onUnmounted(() => {
           <i class="fas fa-redo" aria-hidden="true"></i>
           {{ t('scan.result.scanAnother') }}
         </button>
+      </div>
+    </div>
+
+    <div 
+      v-if="showScheduleModal" 
+      class="modal-overlay"
+      @click.self="showScheduleModal = false"
+    >
+      <div class="modal card" role="dialog" aria-modal="true">
+        <div class="modal-header">
+          <h3>{{ t('schedule.addReminder') }}</h3>
+          <button 
+            class="btn-icon-sm"
+            @click="showScheduleModal = false"
+            aria-label="Close modal"
+          >
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <form @submit.prevent="saveSchedule" class="modal-form">
+          <div class="form-group">
+            <label for="drugName">Medication Name</label>
+            <input 
+              id="drugName"
+              v-model="newSchedule.drugName"
+              type="text"
+              class="input"
+              required
+              placeholder="e.g., Paracetamol"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="dosage">Dosage</label>
+            <input 
+              id="dosage"
+              v-model="newSchedule.dosage"
+              type="text"
+              class="input"
+              required
+              placeholder="e.g., 500mg, 1 tablet"
+            >
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="time">{{ t('schedule.time') }}</label>
+              <input 
+                id="time"
+                v-model="newSchedule.time"
+                type="time"
+                class="input"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="frequency">{{ t('schedule.frequency') }}</label>
+              <select 
+                id="frequency"
+                v-model="newSchedule.frequency"
+                class="input"
+              >
+                <option value="daily">{{ t('schedule.frequencies.daily') }}</option>
+                <option value="weekly">{{ t('schedule.frequencies.weekly') }}</option>
+                <option value="asNeeded">{{ t('schedule.frequencies.asNeeded') }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">{{ t('schedule.notes') }}</label>
+            <textarea 
+              id="notes"
+              v-model="newSchedule.notes"
+              class="input"
+              rows="2"
+              :placeholder="t('schedule.notesPlaceholder')"
+            ></textarea>
+          </div>
+
+          <div class="modal-actions">
+            <button 
+              type="button"
+              class="btn btn-secondary"
+              @click="showScheduleModal = false"
+            >
+              {{ t('common.cancel') }}
+            </button>
+            <button 
+              type="submit"
+              class="btn btn-primary"
+            >
+              {{ t('common.save') }}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -769,5 +909,117 @@ onUnmounted(() => {
 
 .result-actions .btn-icon {
   flex: 0 0 auto;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  margin: 0 auto;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.modal-form {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.input {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.modal-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--glass-border);
+}
+
+.modal-actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
