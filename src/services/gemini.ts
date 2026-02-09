@@ -213,7 +213,7 @@ export function getDefaultResult(): GeminiAnalysisResult {
     return {
         drugName: 'Unknown',
         dosage: '',
-        instructions: 'Could not analyze medication. Please try again with a clearer image.',
+        instructions: 'Could not analyze the medication. Please try again with a clearer image.',
         instructionsYoruba: 'Ko le se ayewo oogun. Jowo gbiyanju pelu aworan ti o ye.',
         confidence: 0
     }
